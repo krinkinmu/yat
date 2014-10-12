@@ -3,7 +3,7 @@ def fibonacci(index) {
         if (index == 0) {
             print current;
         } else {
-            fibonacci(next, current + next, index - 1);
+            fibonacci_impl(next, current + next, index - 1);
         }
     }
     fibonacci_impl(0, 1, index);
