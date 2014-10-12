@@ -246,7 +246,7 @@ class Parser:
         token = self.peek_token()
         if self.is_unary(token.value):
             self.drop_tokens()
-            return model.UnaryOperator(token.value, self.parse_unary())
+            return model.UnaryOperation(token.value, self.parse_unary())
 
         primary = self.parse_primary()
         while self.peek_token().value == '(':
