@@ -129,9 +129,7 @@ class Parser:
         return self.tokens[at]
 
     def drop_tokens(self, count = 1):
-        for _ in range(count):
-            print('drop token', repr(self.peek_token()))
-            self.position += 1
+        self.position += count
 
     def ensure_token(self, value):
         token = self.peek_token()
