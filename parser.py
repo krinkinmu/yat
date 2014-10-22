@@ -280,6 +280,8 @@ class Parser:
                 statements.append(self.parse_def())
             elif token.value == 'if':
                 statements.append(self.parse_if())
+            elif token.value == ';':
+                self.drop_tokens()
             else:
                 if token.value == 'read':
                     statements.append(self.parse_read())
