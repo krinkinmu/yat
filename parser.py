@@ -295,11 +295,13 @@ class Parser:
             self.ensure_token('}')
         return statements
 
-    def parse(self, tokens):
+    def parse(self, tokens, wrap = True):
         self.tokens = [token for token in tokens]
         self.position = 0
         program = self.parse_block(False)
-        return model.Function([], program)
+        if wrap:
+            return model.Function([], program)
+        return program
 
 if __name__ == "__main__":
     import sys
