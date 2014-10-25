@@ -1,3 +1,8 @@
+# Student specific files
+folder.py
+model.py
+printer.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
