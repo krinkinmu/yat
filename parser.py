@@ -305,5 +305,6 @@ class Parser:
 
 if __name__ == "__main__":
     import sys
+    import model_repr as model
     for filename in sys.argv[1:]:
         print(Parser().parse(Scanner(filename)))
