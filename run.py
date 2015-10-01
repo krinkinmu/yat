@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from parser import Parser, Scanner
 from model import Scope
 
