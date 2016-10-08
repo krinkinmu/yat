@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import model
+import yat.model as model
 
 def test_scope():
     f = model.Function([], [model.Number(0)])
