@@ -1,6 +1,6 @@
-from parser import Parser, Scanner
-from model import Scope
-from printer import PrettyPrinter
+from .parser import Parser, Scanner
+from .model import Scope
+from .printer import PrettyPrinter
 
 if __name__ == "__main__":
     import sys

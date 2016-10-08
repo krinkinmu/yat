@@ -1,7 +1,7 @@
-from parser import Parser, Scanner
-from model import Scope
-from printer import PrettyPrinter
-from folder import ConstantFolder
+from .parser import Parser, Scanner
+from .model import Scope
+from .printer import PrettyPrinter
+from .folder import ConstantFolder
 
 if __name__ == "__main__":
     import sys
