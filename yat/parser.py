@@ -1,5 +1,5 @@
 import string
-import model
+import yat.model as model
 
 class Token:
     def __init__(self, value, lineno, offset):

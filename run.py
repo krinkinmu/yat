@@ -1,7 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
-from parser import Parser, Scanner
-from model import Scope
+from yat.parser import Parser, Scanner
+from yat.model import Scope
 
 if __name__ == "__main__":
     import sys
