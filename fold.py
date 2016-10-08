@@ -1,7 +1,7 @@
-from parser import Parser, Scanner
-from model import Scope
-from printer import PrettyPrinter
-from folder import ConstantFolder
+from yat.parser import Parser, Scanner
+from yat.model import Scope
+from yat.printer import PrettyPrinter
+from yat.folder import ConstantFolder
 
 if __name__ == "__main__":
     import sys
