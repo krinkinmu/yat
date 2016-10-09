@@ -19,3 +19,17 @@ main(other)();
 
 read variable;
 main(variable)();
+
+if (1) {
+} else {
+  print(-1);
+}
+
+if (0) {
+  print(-1);
+}
+
+if (0) {
+  print(-1);
+} else {
+}
