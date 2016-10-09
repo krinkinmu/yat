@@ -65,6 +65,16 @@ def test_conditional():
     assert cond.evaluate(scope) is true
     cond = model.Conditional(false, None, [f])
     assert cond.evaluate(scope) is true
+    # If one of the following assertions fail, it means that Conditional has
+    # evaluated wrong branch.
+    cond = model.Conditional(false, [true], None)
+    assert cond.evaluate(scope) is not true
+    cond = model.Conditional(false, [true], [])
+    assert cond.evaluate(scope) is not true
+    cond = model.Conditional(true, None, [false])
+    assert cond.evaluate(scope) is not false
+    cond = model.Conditional(true, [], [false])
+    assert cond.evaluate(scope) is not false
 
 def test_function_call():
     arg_name = "arg"
