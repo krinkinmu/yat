@@ -33,3 +33,23 @@ if (0) {
   print(-1);
 } else {
 }
+
+if (main(10)()) {
+} else {
+}
+
+if (main(20)()) {
+  print(30);
+} else {
+}
+
+if (main(40)()) {
+} else {
+  print(50);
+}
+
+if (main(60)()) {
+  print(70);
+} else {
+  print(80);
+}
