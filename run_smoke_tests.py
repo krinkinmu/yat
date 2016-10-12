@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import yat.model as model
+import sys
+import io
 
 def test_scope():
     f = model.Function([], [model.Number(0)])
@@ -106,13 +108,26 @@ def test_unary_operation():
     for op in ["-", "!"]:
         model.UnaryOperation(op, a).evaluate(model.Scope())
 
+def test_bool_print():
+    strio = io.StringIO()
+    old_stdout = sys.stdout
+    sys.stdout = strio
+    try:
+        a = model.Number(10)
+        b = model.Number(20)
+        for op in ["==", "!=", "<", ">", "<=", ">=", "&&", "||"]:
+            model.Print(model.BinaryOperation(a, op, b)).evaluate(model.Scope())
+    finally:
+        sys.stdout = old_stdout
+    map(int, strio.getvalue().split())
+
 if __name__ == "__main__":
     import traceback
 
     smoke_tests = [
         test_scope, test_number, test_function, test_function_definition,
         test_conditional, test_function_call, test_reference,
-        test_binary_operation, test_unary_operation
+        test_binary_operation, test_unary_operation, test_bool_print
     ]
 
     for test in smoke_tests:
