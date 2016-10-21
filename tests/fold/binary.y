@@ -10,3 +10,6 @@ print a() * 0;
 print a - b;
 print b - a;
 print b() - b();
+print a + 0;
+print 0 + a;
+print a + a;
